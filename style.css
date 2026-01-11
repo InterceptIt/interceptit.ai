@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #0D7377 0%, #14B8A6 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #1a1a1a;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.content {
+    background: white;
+    border-radius: 20px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #6b7280;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.email-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.email-form input {
+    flex: 1;
+    padding: 14px 18px;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.email-form input:focus {
+    border-color: #0D7377;
+}
+
+.email-form button {
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #0D7377 0%, #14B8A6 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.email-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 115, 119, 0.4);
+}
+
+.email-form button:active {
+    transform: translateY(0);
+}
+
+.message {
+    font-size: 14px;
+    min-height: 20px;
+    transition: color 0.2s;
+}
+
+.message.success {
+    color: #10b981;
+}
+
+.message.error {
+    color: #ef4444;
+}
+
+@media (max-width: 600px) {
+    .content {
+        padding: 40px 24px;
+    }
+    
+    .title {
+        font-size: 36px;
+    }
+    
+    .subtitle {
+        font-size: 16px;
+    }
+    
+    .email-form {
+        flex-direction: column;
+    }
+    
+    .email-form button {
+        width: 100%;
+    }
+}
