@@ -3,60 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Intercept - Coming Soon">
+    <meta name="description" content="Intercept - Intelligent observability for AI-powered applications">
     <title>Intercept - Coming Soon</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Parallax Stars Background -->
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    
+    <!-- Content -->
     <div class="container">
         <div class="content">
+            <!-- Logo + H1 -->
             <div class="logo">
-                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="64" height="64" rx="16" fill="url(#gradient)"/>
-                    <path d="M32 16L44 28L32 40L20 28L32 16Z" fill="white" opacity="0.9"/>
-                    <path d="M32 28L36 32L32 36L28 32L32 28Z" fill="white"/>
-                    <defs>
-                        <linearGradient id="gradient" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#0D7377"/>
-                            <stop offset="1" stop-color="#14B8A6"/>
-                        </linearGradient>
-                    </defs>
-                </svg>
+                <div class="logo-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
+                    </svg>
+                </div>
+                <h1 class="logo-text">Intercept AI</h1>
             </div>
             
-            <h1 class="title">Coming Soon</h1>
-            <p class="subtitle">We're building something amazing. Stay tuned!</p>
+            <!-- Divider -->
+            <div class="divider"></div>
             
-            <div class="email-form">
-                <input type="email" id="email" placeholder="Enter your email" />
-                <button onclick="handleSubmit()">Notify Me</button>
-            </div>
+            <!-- Tagline -->
+            <p class="tagline">Your AI's observability layer — trace, analyze, optimize.</p>
             
-            <p class="message" id="message"></p>
+            <!-- Coming Soon -->
+            <div class="coming-soon">Coming Soon</div>
         </div>
     </div>
-    
-    <script>
-        function handleSubmit() {
-            const email = document.getElementById('email').value;
-            const messageEl = document.getElementById('message');
-            
-            if (!email || !email.includes('@')) {
-                messageEl.textContent = 'Please enter a valid email address';
-                messageEl.className = 'message error';
-                return;
-            }
-            
-            messageEl.textContent = 'Thanks! We\'ll notify you when we launch.';
-            messageEl.className = 'message success';
-            document.getElementById('email').value = '';
-        }
-        
-        document.getElementById('email').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                handleSubmit();
-            }
-        });
-    </script>
 </body>
 </html>
